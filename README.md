@@ -577,6 +577,13 @@ chown -R bind /var/log/bind
 chmod u+rw /var/log/bind
 ```
 
+##### Editar el fichero /etc/apparmor.d/usr.sbin.named y añadir las líneas
+
+```bash
+/var/log/bind/** rw,
+/var/log/bind/ rw,
+```
+
 ```bash
 nano /etc/bind/named.conf.logging
 
